@@ -11,6 +11,7 @@ class Tour::ClI
     puts "|---------------------------------------|"
     web
     calendar
+    exit_tour 
   end
   
   
@@ -33,14 +34,17 @@ def calendar
   puts "|Your tour is booked for #{date} of #{month}!  |"
   puts "|----------------------------------------------|"
   
-  if month == "november"||"decembre"||"january"||"february"||"march"
+  if month == "november" "decembre" "january" "february" "march"
     puts tour1
-       elsif month == "april"||"may"||"june"||"july"||"august"||"september"||"octombre"
-       puts tour2
-         else 
-         puts "error"
+      else 
+        month == "april" "may" "june" "july" "august" "september" "octombre"
+      puts tour2
+       
   end 
-end 
+ end 
+ 
+ 
+
   
   def tour1
     puts "|tour schedule|"
@@ -64,6 +68,20 @@ def tour2
     puts "|1. dinner, on the yacht with beautiful sunset              |"
     puts "|-----------------------------------------------------------|"
   end 
+  
+  def exit_tour 
+    puts "Your booking is complit!"
+    puts "If you are done please type exit!"
+    input = gets.chomp 
+    
+    if input == "exit"
+      puts "Have a beautiful day"
+    else 
+      puts "I didnt get that"
+    end 
+  end 
+    
+    
   
 
   
