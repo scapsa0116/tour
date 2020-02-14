@@ -1,35 +1,37 @@
+
 class Tour::Places 
   attr_accessor :name :location 
-  attr_reader :price 
+ 
+
+   @@all = []
   def new_fromPage(t)
-    self.new(t.css(div.sample-itineraries-module--sample-itineraries__itinerary--image-wrapper--1Ix2w))
+   self.new(
+    t.css("div.lazy-load-ref"),
+    t.css"https://www.zicasso.com/luxury-tours/italy#{t.css("a").attribute("href").text}", 
+    t.css("div.style").text) 
+  
+    #outputs the discription of every place (name, information, picture)
   end 
+  
   @@all = []
-  def initialize(name = nil, location = nil, price = nil)
+  def initialize(name = nil, location = nil)
     @name = name 
     @location = location 
-    @price = price 
     save 
   end 
   def save 
     @@all << self 
   end 
   
-  def price
-    @price = "300 $"
-  
-  def location 
-    @location = cinqueTerre 
+ def location 
+    @location
   end 
   
   def name 
-    @name = doc.xpath (div.lazy-load-ref)
+    @name 
   end 
+  
+  #in case we want to creat more instances of tour 
 end 
   
-  tour = Tour.new 
-  tour.name
-  tour.price
-  tour.location
-  
-  
+ 

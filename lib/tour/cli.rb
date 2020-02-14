@@ -68,12 +68,12 @@ def calendar
   month = gets.chomp
   puts "please type in your date(numbers)"
   date = gets.to_i
-  if date <= 31 
-    puts true 
-  else 
-    puts "Wrong entry, please type in again the date "
-          date = gets.to_i
-  end 
+    if date <= 31 
+       puts true 
+    else 
+       puts "Wrong entry, please type in again the date "
+       date = gets.to_i
+    end 
    
   puts "|----------------------------------------------|"
   puts "|Your tour is booked for #{date} of #{month}!  |"
@@ -92,11 +92,8 @@ def calendar
     
  end
  
- 
- 
 end 
 
-  
   
   
   def exit_tour 
@@ -111,8 +108,4 @@ end
     end 
   end 
     
-    
-  
-
-  
 end 
