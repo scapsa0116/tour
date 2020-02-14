@@ -20,26 +20,6 @@ class Tour::ClI
    end 
   
   
-def calendar
-  puts "please type in your month (ex:full name january)"
-  month = gets.chomp
-  puts "please type in your date(numbers)"
-  date = gets.to_i
-  puts "|----------------------------------------------|"
-  puts "|Your tour is booked for #{date} of #{month}!  |"
-  puts "|----------------------------------------------|"
-  
-  if month == "november" "decembre" "january" "february" "march"
-    puts tour1
-      else 
-        month == "april" "may" "june" "july" "august" "september" "octombre"
-      puts tour2
-       
-  end 
- end 
- 
- 
-
   
   def tour1
     puts "|tour schedule|"
@@ -64,6 +44,44 @@ def tour2
     puts "|-----------------------------------------------------------|"
   end 
   
+  
+  
+def calendar
+  puts "please type in your month (ex:full name january)"
+  month = gets.chomp
+  puts "please type in your date(numbers)"
+  date = gets.to_i
+  if date <= 31 
+    puts true 
+  else 
+    puts "Wrong entry, please type in again the date "
+          date = gets.to_i
+  end 
+   
+  puts "|----------------------------------------------|"
+  puts "|Your tour is booked for #{date} of #{month}!  |"
+  puts "|----------------------------------------------|"
+  
+ 
+  
+  if month == "november" || month=="december"|| month=="january"|| month=="february" then
+    puts self.tour1
+    
+  end
+  
+  if month == "march" || month == "april" || month=="may"|| month=="june"|| month=="july" || month=="august"||month=="september"||month=="october" then
+    
+      puts self.tour2
+    
+ end
+ 
+ 
+ 
+end 
+
+  
+  
+  
   def exit_tour 
     puts "Your booking is complit!"
     puts "If you are done please type exit!"
@@ -72,7 +90,7 @@ def tour2
     if input == "exit"
       puts "Have a beautiful day"
     else 
-      puts "I didnt get that"
+      puts "I didnt get that, I'll exit for you"
     end 
   end 
     
