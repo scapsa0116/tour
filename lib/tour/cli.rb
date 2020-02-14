@@ -10,6 +10,7 @@ class Tour::ClI
     puts "|                                       |"
     puts "|---------------------------------------|"
     web
+    price
     calendar
     exit_tour 
   end
@@ -17,6 +18,22 @@ class Tour::ClI
   
   def web 
     @scraping = Tour::Scraping.scrap_web
+   end 
+   
+   def price 
+     puts "Please enter the numbers of people, maximum 7 people and minimum 2 people"
+     numbers = gets.to_i 
+     if numbers >= 4 || numbers >= 5 || numbers >= 6 || numbers >= 7
+       puts"|-------------|"
+       puts"| PRICE  500$ |"
+       puts"|-------------|"
+     elsif numbers >= 2 || numbers >= 3 || numbers <= 4
+       puts"|-------------|"
+       puts"| PRICE  300$ |"
+       puts"|-------------|"
+     else 
+       puts "ERROR"
+    end 
    end 
   
   
