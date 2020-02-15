@@ -1,5 +1,3 @@
-require 'nokogiri'
-require 'open-uri'
 
 
 class Tour::ClI
