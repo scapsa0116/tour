@@ -1,5 +1,3 @@
-
-
 class Tour::ClI
   def call
     puts "|---------------------------------------|"
@@ -7,16 +5,14 @@ class Tour::ClI
     puts "|   Welcome to Cinqueterre Italy tour   |"
     puts "|                                       |"
     puts "|---------------------------------------|"
-    web
+    Tour::Scraping.scrap_web
     price
     calendar
     exit_tour 
   end
   
   
-  def web 
-    @scraping = Tour::Scraping.scrap_web
-   end 
+ 
    
    def price 
      puts "Please enter the numbers of people, maximum 7 people and minimum 2 people"
@@ -105,5 +101,5 @@ end
       puts "I didnt get that, I'll exit for you"
     end 
   end 
-    
 end 
+
