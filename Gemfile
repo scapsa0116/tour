@@ -1,5 +1,5 @@
 source "https://rubygems.org"
 gem 'nokogiri'
-gem "pry"
+ gem 'pry'
 # Specify your gem's dependencies in tour.gemspec
-gemspec
+# gemspec
