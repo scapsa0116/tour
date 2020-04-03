@@ -18,6 +18,10 @@ class Tour::Places
     @@all
   end 
   
+  def self.price(line) 
+    @price 
+  end 
+  
  def save 
     @@all << self 
   end 
