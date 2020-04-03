@@ -1,10 +1,9 @@
 class Tour::Places 
-  attr_accessor :price, :one_description
+  attr_accessor :one_description
  
    @@all = []
-  def initialize (one_description)
-    @price = price 
-    @one_description = one_description
+  def initialize (description)
+   @description = description
     save 
   end 
 
@@ -17,10 +16,7 @@ class Tour::Places
     @@all
   end 
  
- def self.find_by_index(index)
-    @@all[index]
-  end
-  
+
 end 
   
  

@@ -5,31 +5,26 @@ class Tour::ClI
     puts "|   Welcome to Cinqueterre Italy tour   |"
     puts "|                                       |"
     puts "|---------------------------------------|"
-    Tour::Scraping.scrap_web
-    #list_tours
+    introduction
     cost
     tour1
     tour2
     calendar
     exit_tour 
   end
+  
+  def introduction 
+  puts "CHOOSE ONE OF THE 22 TOUR OPTIONS, THAT ARE OFFERED JUST FOR ONE DAY WITH LOWEST       PRICES"
+     Tour::Scraping.scrap_web
+     input = gets.chomp 
+     
+     if input == [1..22]
+       input
+     else
+       puts "You choose the option #{input}" 
+      end 
+   end 
 
-# def list_tours
-#   puts "Please choose one of the next 22 options"
-#   items = Tour::Places.all
-#   items.each_with_index do |pl, index| 
-    
-#     puts "#{index+1} #{pl}"
-    
-    
-#   # puts "#{pl.price} : #{pl.description}"
-#   # binding.pry
-#   end 
-# end 
- 
- 
- 
-   
    def cost 
      puts "--------------------------------------------------------------------------"
      puts "Please enter the numbers of people, maximum 7 people and minimum 2 people"
@@ -46,6 +41,7 @@ class Tour::ClI
        puts "ERROR"
     end 
    end 
+ 
   
   
   
