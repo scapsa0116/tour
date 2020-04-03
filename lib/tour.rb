@@ -1,6 +1,7 @@
 require_relative "./tour/version"
 require_relative "./tour/scraping"
 require_relative "./tour/cli"
+require_relative "./tour/places"
 require 'nokogiri'
 require 'open-uri'
 require 'pry'

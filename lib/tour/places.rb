@@ -1,34 +1,26 @@
 class Tour::Places 
-  attr_accessor :title, :location, :price, :description 
+  attr_accessor :price, :one_description
  
    @@all = []
-  def initialize(title, location, price, description)
-    @title = title
-    @location = location 
+  def initialize (one_description)
     @price = price 
-    @description = description
+    @one_description = one_description
     save 
   end 
+
   
-  def title 
-    @title = @row.css("div.sample-itineraries-module--text--Fg8RY sample-itineraries-module--sample-itineraries__itinerary--caption--title--pDxwv").text
+  def save 
+    @@all << self 
   end 
   
   def self.all 
     @@all
   end 
+ 
+ def self.find_by_index(index)
+    @@all[index]
+  end
   
-  def self.price(line) 
-    @price 
-  end 
-  
- def save 
-    @@all << self 
-  end 
-  
-
-  
-  #in case we want to creat more instances of tour 
 end 
   
  

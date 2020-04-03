@@ -6,18 +6,32 @@ class Tour::ClI
     puts "|                                       |"
     puts "|---------------------------------------|"
     Tour::Scraping.scrap_web
-    Tour::Scraping.prices
+    #list_tours
     cost
+    tour1
+    tour2
     calendar
     exit_tour 
   end
 
-  
-  
+# def list_tours
+#   puts "Please choose one of the next 22 options"
+#   items = Tour::Places.all
+#   items.each_with_index do |pl, index| 
+    
+#     puts "#{index+1} #{pl}"
+    
+    
+#   # puts "#{pl.price} : #{pl.description}"
+#   # binding.pry
+#   end 
+# end 
+ 
+ 
  
    
    def cost 
-     puts "--------------------------------------------------------------------------"*3
+     puts "--------------------------------------------------------------------------"
      puts "Please enter the numbers of people, maximum 7 people and minimum 2 people"
      numbers = gets.to_i 
      if numbers >= 4 || numbers >= 5 || numbers >= 6 || numbers >= 7
@@ -36,6 +50,7 @@ class Tour::ClI
   
   
   def tour1
+    
     puts "|tour schedule|"
     puts "|-----------------------------------------------------------|"
     puts "|1. pick up at 7 am                                         |"
@@ -105,4 +120,3 @@ end
     end 
   end 
 end 
-
