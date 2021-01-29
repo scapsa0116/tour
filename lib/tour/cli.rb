@@ -1,31 +1,48 @@
+# require 'nokogiri'
+# require 'open-url'
+
+
 class Tour::ClI
+  
+
+
   def call
     puts "|---------------------------------------|"
     puts "|                                       |"
     puts "|   Welcome to Cinqueterre Italy tour   |"
     puts "|                                       |"
     puts "|---------------------------------------|"
-    introduction
-    cost
-    tour1
-    tour2
+    web
+    price
+    # places
+    # cost
+    # tour1
+    # tour2
     calendar
     exit_tour 
   end
   
-  def introduction 
-  puts "CHOOSE ONE OF THE 22 TOUR OPTIONS, THAT ARE OFFERED JUST FOR ONE DAY WITH LOWEST       PRICES"
-     Tour::Scraping.scrap_web
-     input = gets.chomp 
-     
-     if input == [1..22]
-       input
-     else
-       puts "You choose the option #{input}" 
-      end 
-   end 
+  def web
+  Tour::Scraping.scrap_web
+  end
 
-   def cost 
+# def places
+#   Tour::Places.new.new_fromPage(t)
+# end
+
+  # def price
+  # puts "CHOOSE ONE OF THE 22 TOUR OPTIONS, THAT ARE OFFERED JUST FOR ONE DAY WITH LOWEST       PRICES"
+     
+  #    input = gets.chomp 
+     
+  #    if input == [1..22]
+  #      input
+  #    else
+  #      puts "You choose the option #{input}" 
+  #     end 
+  #  end 
+
+   def price 
      puts "--------------------------------------------------------------------------"
      puts "Please enter the numbers of people, maximum 7 people and minimum 2 people"
      numbers = gets.to_i 
@@ -47,7 +64,7 @@ class Tour::ClI
   
   def tour1
     
-    puts "|tour schedule|"
+    puts "|tour schedule cold wether|"
     puts "|-----------------------------------------------------------|"
     puts "|1. pick up at 7 am                                         |"
     puts "|2. three places to visit                                   |"
@@ -59,7 +76,7 @@ class Tour::ClI
 
 
 def tour2
-    puts "|tour schedule|"
+    puts "|tour schedule hot weather|"
     puts "|-----------------------------------------------------------|"
     puts "|1. pick up at 7 am                                         |"
     puts "|2. three places to visit                                   |"
