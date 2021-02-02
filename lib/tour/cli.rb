@@ -9,7 +9,7 @@ class Tour::ClI
   def call
     puts "|---------------------------------------|"
     puts "|                                       |"
-    puts "|   Welcome to Cinqueterre Italy tour   |"
+    puts "|      Welcome World Tour Company       |"
     puts "|                                       |"
     puts "|---------------------------------------|"
     web
@@ -78,7 +78,7 @@ def calendar
   puts "please type in your date(numbers)"
   date = gets.to_i
     if date <= 31 
-       puts true 
+        true 
     else 
        puts "Wrong entry, please type in again the date "
        date = gets.to_i
