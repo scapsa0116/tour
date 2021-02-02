@@ -13,34 +13,18 @@ class Tour::ClI
     puts "|                                       |"
     puts "|---------------------------------------|"
     web
-    price
-    # places
-    # cost
-    # tour1
-    # tour2
     calendar
     exit_tour 
   end
   
   def web
   Tour::Scraping.scrap_web
+  
   end
 
-# def places
-#   Tour::Places.new.new_fromPage(t)
-# end
 
-  # def price
-  # puts "CHOOSE ONE OF THE 22 TOUR OPTIONS, THAT ARE OFFERED JUST FOR ONE DAY WITH LOWEST       PRICES"
-     
-  #    input = gets.chomp 
-     
-  #    if input == [1..22]
-  #      input
-  #    else
-  #      puts "You choose the option #{input}" 
-  #     end 
-  #  end 
+
+  
 
    def price 
      puts "--------------------------------------------------------------------------"
@@ -100,9 +84,9 @@ def calendar
        date = gets.to_i
     end 
    
-  puts "|----------------------------------------------|"
+  puts "|==============================================|"
   puts "|Your tour is booked for #{date} of #{month}!  |"
-  puts "|----------------------------------------------|"
+  puts "|==============================================|"
   
  
   
