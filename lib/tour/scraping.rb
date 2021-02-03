@@ -54,36 +54,8 @@ end
 
 
 
-    # def new_fromPage(t)
-    #   self.new(
-    #     t.css("h3").text,
-    #     # t.css("https://www.zicasso.com/luxury-tours/italy#{t.css("a").attribute("href").text}"),
-    #     t.css("p").text)
-    # end
-    
-
-
-
-#   def scrap_page
-#     self.page.css("div.wpcap-grid article").text
-#   end
-
-#   def scrape_pages
-#     self.scrape_page.each do |t|
-#       Tour::Places.new.new_fromPage(t)
-#   end
-# end 
-# def desc
-#       description.each_with_index do |index, one_description|
-#       puts "#{index+1}"
-#       puts "#{one_description.text}"
-#        Tour::Places.new(description)
-#       end
-#     end 
    
  
-
-
 
 
 

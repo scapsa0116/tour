@@ -16,17 +16,7 @@ end
 
 
 def self.all
-  @@all.each do |list|
-    puts "Title:   #{list.name}"
-    puts "Description: #{list.description}"
-                
-      if list.title == "" || list.description == ""
-          puts "Incorect input"
-
-      else
-          puts "Title: #{list.name}" && "Description: #{list.description}"
-      end
-    end
+  @@all
 end
 
 def self.search(place_title)
